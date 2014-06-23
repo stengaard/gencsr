@@ -1,4 +1,5 @@
-// gencsr generate certificate signing requests.
+// gencsr generate certificate signing requests. It
+// is born out of a dislike for 'openssl req'.
 package main
 
 import (
@@ -48,7 +49,7 @@ func parseSubject(sub string) (pkix.Name, error) {
 		}
 		v := strings.SplitN(elem, "=", 2)
 		if len(v) == 1 {
-			return n, fmt.Errorf("malformed subject - format is \"/C=$yourcountry/.../\" - you set %s", sub)
+			return n, fmt.Errorf("malformed subject - format is \"/C=$yourcountry/.../\" - you supplied '%s'", sub)
 		}
 
 		key, val := v[0], v[1]
