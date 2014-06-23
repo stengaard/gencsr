@@ -1,3 +1,4 @@
+```
 gencsr generates certificate signing requests for you
 Usage of gencsr:
 
@@ -15,3 +16,4 @@ the recognized subject fields are:
 
 Options:
   -name="-": File name basis for certificate request. '-' means use stdout.
+```
